@@ -1,0 +1,22 @@
+import java.util.Scanner;
+
+public class Task1 {
+  public static void main (String args[]) {
+    
+    Scanner sc = new Scanner(System.in);
+    int n = sc.nextInt();
+    
+    boolean isItPrime = false;
+    
+    for (int z=2; z<=n; z++) {
+      isItPrime = true;
+      for (int i=2; i<=z; i++) {
+        if (z%i==0) {
+          isItPrime = false;
+          break;
+        }
+      }
+      if (isItPrime) System.out.print(z + " ");
+    }
+  }
+}
