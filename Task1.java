@@ -1,6 +1,6 @@
 package myTasks;
 
-import java.util.Scanner;
+import java.util.Scanner; 
 
 public class Task1 {
 
