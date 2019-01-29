@@ -16,17 +16,18 @@ public class Task1 {
     }
 
     private static int getInput() {
-        while(true) {
-        Scanner sc = new Scanner(System.in);
-        try {
-            return sc.nextInt();
-        } catch (InputMismatchException e) {
-            System.out.println("Error, input an integer number");
-        } finally {
-            sc.close();
-        }
         
-    }}
+        while(true) {
+            Scanner sc = new Scanner(System.in);
+            try {
+                return sc.nextInt();
+            } catch (InputMismatchException e) {
+                System.out.println("Error, input an integer number");
+            } finally {
+                sc.close();
+            }
+        }
+    }
 
     private static boolean isPrime(int currentNumber) {
         if (currentNumber < 2) {
