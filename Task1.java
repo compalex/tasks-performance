@@ -2,7 +2,7 @@ package myTasks;
 
 import java.util.InputMismatchException;
 import java.util.Scanner;
-
+//initial version 1.0 by compalex
 public class Task1 {
 
     public static void main(String args[]) {
