@@ -2,7 +2,8 @@ package myTasks;
 
 import java.util.InputMismatchException;
 import java.util.Scanner;
-//initial version 1.0 by compalex
+//initial version 1.0 
+//by compalex
 public class Task1 {
 
     public static void main(String args[]) {
@@ -17,16 +18,16 @@ public class Task1 {
 
     private static int getInput() {
         
-        while(true) {
             Scanner sc = new Scanner(System.in);
             try {
                 return sc.nextInt();
             } catch (InputMismatchException e) {
                 System.out.println("Error, input an integer number");
+                return 0;
             } finally {
                 sc.close();
             }
-        }
+        
     }
 
     private static boolean isPrime(int currentNumber) {
