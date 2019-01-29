@@ -1,26 +1,34 @@
 import java.util.Scanner;
-//that's the very 1st task and the simplest one
+
 public class Task1 {
 
 	public static void main(String args[]) {
 
+		int inputNumber = getInput();
+
+		for (int i = 0; i <= inputNumber; i++) {
+			if (isPrime(i)) {
+				System.out.print(i + " ");
+			}
+		}		
+	}
+
+	static int getInput() {
 		Scanner sc = new Scanner(System.in);
 		int number = sc.nextInt();
-		sc.close();
+		return number;
+	}
 
-		boolean isPrime = false;
+	static boolean isPrime(int currentNumber) {
+		if (currentNumber < 2) {
+			return false;
+		}
 
-		for (int z = 2; z <= number; z++) {
-			isPrime = true;
-            
-			for (int i = 2; i < z; i++) {
-				if (z % i == 0) {
-					isPrime = false;
-				}
-			}
-			if (isPrime) {
-				System.out.print(z + " ");
+		for (int i = 2; i < currentNumber; i++) {
+			if (currentNumber % i == 0) {
+				return false;
 			}
 		}
+		return true;
 	}
 }
