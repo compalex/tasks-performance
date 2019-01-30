@@ -27,10 +27,12 @@ class Task2 {
     }
 
     private static int getFibo(int i) {
-        if (i == 0)
+        if (i == 0) {
             return 1;
-        if (i == 1)
+        }
+        if (i == 1) {
             return 2;
+        }
         return getFibo(i - 1) + getFibo(i - 2);
     }
 }
