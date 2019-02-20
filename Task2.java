@@ -2,15 +2,15 @@ package myTasks;
 
 import java.util.Scanner;
 import java.util.InputMismatchException;
-
-class Task2 {
+/**
+ * Search for fibonacci numbers
+ * @version 1.0 
+ * @author compalex
+ */
+public class Task2 {
 
     public static void main(String[] args) {
-        int inputNumber = getInput();
-        
-        for (int i = 0; getFibo(i) <= inputNumber; i++) {
-            System.out.print (getFibo(i) + " ");
-        }
+        printFibo(getInput());        
     }
 
     private static int getInput() {
@@ -20,12 +20,19 @@ class Task2 {
             return sc.nextInt();
         } catch (InputMismatchException e) {
             System.out.println("Error, input an integer number");
-            return 0;
+            return getInput();
         } finally {
             sc.close();
         }
     }
 
+    private static void printFibo(int inputNumber) {
+        
+        for (int i = 0; getFibo(i) <= inputNumber; i++) {
+            System.out.print (getFibo(i) + " ");
+        }
+    }
+    
     private static int getFibo(int i) {
         if (i == 0) {
             return 1;
