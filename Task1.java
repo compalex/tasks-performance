@@ -27,7 +27,7 @@ public class Task1 {
                 return sc.nextInt();
             } catch (InputMismatchException e) {
                 System.out.println("Error, input an integer number");
-                return 0;
+                return getInput();
             } finally {
                 sc.close();
             }
