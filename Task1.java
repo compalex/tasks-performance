@@ -9,6 +9,9 @@ import java.util.Scanner;
  * @author compalex
  */
 public class Task1 {
+    
+    private static final String INPUT_PROMPT = "Input an integer number:"; 
+    private static final String INPUT_ERROR = "Error! Wrong input! "; 
 
     public static void main(String args[]) {
         int inputNumber = getInput();
@@ -24,9 +27,10 @@ public class Task1 {
             Scanner sc = new Scanner(System.in);
             
             try {
+                System.out.println(INPUT_PROMPT);
                 return sc.nextInt();
             } catch (InputMismatchException e) {
-                System.out.println("Error, input an integer number");
+                System.out.print(INPUT_ERROR);
                 return getInput();
             } finally {
                 sc.close();
