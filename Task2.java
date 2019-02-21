@@ -8,6 +8,9 @@ import java.util.InputMismatchException;
  * @author compalex
  */
 public class Task2 {
+    
+    private static final String INPUT_PROMPT = "Input an integer number:"; 
+    private static final String INPUT_ERROR = "Error! Wrong input! "; 
 
     public static void main(String[] args) {
         printFibo(getInput());        
@@ -17,9 +20,10 @@ public class Task2 {
         Scanner sc = new Scanner(System.in);
 
         try {
+            System.out.println(INPUT_PROMPT);
             return sc.nextInt();
         } catch (InputMismatchException e) {
-            System.out.println("Error, input an integer number");
+            System.out.print(INPUT_ERROR);
             return getInput();
         } finally {
             sc.close();

@@ -8,6 +8,10 @@ import java.util.Scanner;
  * @author compalex
  */
 public class Task3 {
+    
+    private static final String INPUT_PROMPT_X = "Input coordinate of x"; 
+    private static final String INPUT_PROMPT_Y = "Input coordinate of y"; 
+    private static final String INPUT_ERROR = "Error! Wrong input!"; 
 
     public static void main(String[] args) {
 	    
@@ -41,15 +45,15 @@ public class Task3 {
             double[] coord = new double[8];
          
             for(int i=0; i<8; i++) {
-                System.out.println("Input x" + (1 + i/2));
+                System.out.println(INPUT_PROMPT_X + (1 + i/2));
                 coord[i] =  sc.nextDouble();
                 i++;
-                System.out.println("Input y" + (1 + i/2));
+                System.out.println(INPUT_PROMPT_Y + (1 + i/2));
                 coord[i] =  sc.nextDouble();             
             }
         return coord;
         } catch (InputMismatchException e) {
-            System.out.println("Error, input an integer number");
+            System.out.println(INPUT_ERROR);
             return getCoordinates();
         } finally {
             sc.close();

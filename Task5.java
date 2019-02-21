@@ -8,18 +8,22 @@ import java.util.Scanner;
  * @author compalex
  */
 public class Task5 {
+    
+    private static final String INPUT_PROMPT = "Input a word:"; 
+    private static final String INPUT_ERROR = "Error! Wrong input! "; 
+    private static final String QUESTION = "Is the word is a palindrome? --> "; 
 
     public static void main(String[] args) {             
-        System.out.println("Is word a palindrome? --> " + isItPalindrome(getWord()));
+        System.out.println(QUESTION + isItPalindrome(getWord()));
     }
 
     private static String getWord() {
         Scanner sc = new Scanner(System.in);       
         try {
-            System.out.println("Input word:");
+            System.out.println(INPUT_PROMPT);
             return sc.nextLine();
         } catch (InputMismatchException e) {
-            System.out.println("Error, input an integer number.");
+            System.out.println(INPUT_ERROR);
             return sc.nextLine();
         } finally {
             sc.close();

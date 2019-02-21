@@ -11,6 +11,9 @@ public class Task4 {
     
     static int num1;
     static int num2;
+    private static final String INPUT_PROMPT_1 = "Input the first number:"; 
+    private static final String INPUT_PROMPT_2 = "Input the second number:"; 
+    private static final String INPUT_ERROR = "Error! Wrong input!"; 
 
     public static void main(String[] args) {
 
@@ -23,12 +26,13 @@ public class Task4 {
     private static void getNumbers() {
         Scanner sc = new Scanner(System.in);       
         try {
-            System.out.println("Input the first number:");
+            System.out.println(INPUT_PROMPT_1);
             num1 = sc.nextInt();
-            System.out.println("Input the second number:");
+            System.out.println(INPUT_PROMPT_2);
             num2 = sc.nextInt();
         } catch (InputMismatchException e) {
-            System.out.println("Error, input an integer number.");
+            System.out.println(INPUT_ERROR);
+            getNumbers();
         } finally {
             sc.close();
         }      
