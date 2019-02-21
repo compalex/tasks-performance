@@ -2,7 +2,11 @@ package myTasks;
 
 import java.util.InputMismatchException;
 import java.util.Scanner;
-
+/**
+ * The program check a word for palindrome
+ * @version 1.0 
+ * @author compalex
+ */
 public class Task5 {
 
     public static void main(String[] args) {             
