@@ -2,13 +2,13 @@ package myTasks;
 
 import java.util.InputMismatchException;
 import java.util.Scanner;
+
 /**
  * The program determines whether two segments intersect each other or not
  * @version 1.0 
  * @author compalex
  */
 public class Task3 {
-    
     private static final String INPUT_PROMPT_X = "Input coordinate of x"; 
     private static final String INPUT_PROMPT_Y = "Input coordinate of y"; 
     private static final String INPUT_ERROR = "Error! Wrong input!"; 

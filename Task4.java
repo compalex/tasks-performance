@@ -2,13 +2,13 @@ package myTasks;
 
 import java.util.InputMismatchException;
 import java.util.Scanner;
+
 /**
  * The program finds GCD and LCM of two numbers
  * @version 1.0 
  * @author compalex
  */
 public class Task4 {
-    
     static int num1;
     static int num2;
     private static final String INPUT_PROMPT_1 = "Input the first number:"; 
@@ -39,7 +39,6 @@ public class Task4 {
     }
     
     private static int gcd(int a, int b) {      //greatest common divisor
-        
         for(int i=2; i<=a; i++) {
             if(a%i==0 & b%i==0) {
                 return i*gcd(a/i, b/i);
@@ -49,7 +48,6 @@ public class Task4 {
     }
     
     private static int lcm(int a, int b) {      //least common multiple
-        
         for(int i=2; i<=a; i++) {
             if(a%i==0 & b%i==0) {
                 return i*lcm(a/i, b/i);

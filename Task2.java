@@ -2,13 +2,13 @@ package myTasks;
 
 import java.util.Scanner;
 import java.util.InputMismatchException;
+
 /**
  * Search for fibonacci numbers
  * @version 1.0 
  * @author compalex
  */
 public class Task2 {
-    
     private static final String INPUT_PROMPT = "Input an integer number:"; 
     private static final String INPUT_ERROR = "Error! Wrong input! "; 
 
@@ -31,19 +31,14 @@ public class Task2 {
     }
 
     private static void printFibo(int inputNumber) {
+        int numBefore = 0;
         
-        for (int i = 0; getFibo(i) <= inputNumber; i++) {
-            System.out.print (getFibo(i) + " ");
+        for (int i = 1; numBefore <= inputNumber; i += numBefore) {
+            if (numBefore != 0) {           //'cuz 0 doesn't belong to fibo nums
+                System.out.print (numBefore + " ");
+            }
+            numBefore = i - numBefore;
         }
     }
-    
-    private static int getFibo(int i) {
-        if (i == 0) {
-            return 1;
-        }
-        if (i == 1) {
-            return 2;
-        }
-        return getFibo(i - 1) + getFibo(i - 2);
-    }
+
 }

@@ -9,7 +9,6 @@ import java.util.Scanner;
  * @author compalex
  */
 public class Task1 {
-    
     private static final String INPUT_PROMPT = "Input an integer number:"; 
     private static final String INPUT_ERROR = "Error! Wrong input! "; 
 
