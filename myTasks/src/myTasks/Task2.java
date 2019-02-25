@@ -5,15 +5,15 @@ import java.util.InputMismatchException;
 
 /**
  * Search for fibonacci numbers
- * @version 1.0 
+ * @version 1.0
  * @author compalex
  */
 public class Task2 {
-    private static final String INPUT_PROMPT = "Input an integer number:"; 
-    private static final String INPUT_ERROR = "Error! Wrong input! "; 
+    private static final String INPUT_PROMPT = "Input an integer number:";
+    private static final String INPUT_ERROR = "Error! Wrong input! ";
 
     public static void main(String[] args) {
-        printFibo(getInput());        
+        printFibo(getInput());
     }
 
     private static int getInput() {
@@ -31,14 +31,14 @@ public class Task2 {
     }
 
     private static void printFibo(int inputNumber) {
+        if(inputNumber < 0) {
+            return;
+        }
         int numBefore = 0;
-        
+
         for (int i = 1; numBefore <= inputNumber; i += numBefore) {
-            if (numBefore != 0) {           //'cuz 0 doesn't belong to fibo nums
-                System.out.print (numBefore + " ");
-            }
+            System.out.print(numBefore + " ");
             numBefore = i - numBefore;
         }
     }
-
 }
