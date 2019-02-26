@@ -14,11 +14,9 @@ public class Task5 {
     private static final String QUESTION = "Is the word is a palindrome? --> ";
 
     public static void main(String[] args) {
-        StringBuilder strBuilder = new StringBuilder();
-        String word = getWord();
-        strBuilder.append(word);
-        strBuilder.reverse();
-        System.out.println(QUESTION + word.equals(strBuilder.toString()));
+        String input = getWord();
+        String reversedInput = new StringBuilder(input).reverse().toString();
+        System.out.println(QUESTION + input.equals(reversedInput));
     }
 
     private static String getWord() {
