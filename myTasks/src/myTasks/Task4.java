@@ -14,11 +14,16 @@ public class Task4 {
     private static final String INPUT_PROMPT_1 = "Input the first number:";
     private static final String INPUT_PROMPT_2 = "Input the second number:";
     private static final String INPUT_ERROR = "Error! Wrong input!";
+    private static final String DISPLAY_GCD = "The greatest common divisor of ";
+    private static final String DISPLAY_LCM = "The greatest common divisor of ";
+    private static final String AND = " and ";
+    private static final String IS = " is: ";
+    
 
     public static void main(String[] args) {
         getNumbers();
-        System.out.printf("The greatest common divisor of %d and %d is: %d%n", num1, num2, getGCD(num1, num2));
-        System.out.printf("The least common multiple of %d and %d is: %d%n", num1, num2, getLCM(num1, num2));
+        System.out.println(DISPLAY_GCD + num1 + AND + num2 + IS + getGCD(num1, num2));
+        System.out.println(DISPLAY_LCM + num1 + AND + num2 + IS + getLCM(num1, num2));
     }
 
     private static void getNumbers() {
@@ -37,16 +42,16 @@ public class Task4 {
         }
     }
 
-    private static int getGCD(int a, int b) { // greatest common divisor
-        for (int i = 2; i <= a; i++) {
-            if (a % i == 0 & b % i == 0) {
-                return i * getGCD(a / i, b / i);
+    private static int getGCD(int num1, int num2) { // greatest common divisor
+        for (int i = 2; i <= num1 || i <= num2; i++) {
+            if (num1 % i == 0 & num2 % i == 0) {
+                return i * getGCD(num1 / i, num2 / i);
             }
         }
         return 1;
     }
 
-    private static int getLCM(int a, int b) { // least common multiple
-        return a * b / getGCD(a, b);
+    private static int getLCM(int num1, int num2) { // least common multiple
+        return num1 * num2 / getGCD(num1, num2);
     }
 }
