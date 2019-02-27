@@ -10,9 +10,12 @@ import java.util.Scanner;
  */
 public class Task6 {
     private static final String INPUT_PROMPT = "Input text:";
+    private static final String INPUT_ERROR = "Error! Wrong input! ";
+    private static final String CHANGE_WHAT = "[0-9]";
+    private static final String CHANGE_HOW = "";
 
     public static void main(String[] args) {
-        System.out.println(getText().replaceAll("[0-9]", ""));
+        System.out.println(getText().replaceAll(CHANGE_WHAT, CHANGE_HOW));
     }
 
     private static String getText() {
@@ -22,7 +25,8 @@ public class Task6 {
             System.out.println(INPUT_PROMPT);
             return sc.nextLine();
         } catch (NoSuchElementException e) {
-            return sc.nextLine();
+            System.out.println(INPUT_ERROR);
+            return getText();
         } finally {
             sc.close();
         }

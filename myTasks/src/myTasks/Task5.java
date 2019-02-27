@@ -27,7 +27,7 @@ public class Task5 {
             return sc.nextLine();
         } catch (NoSuchElementException e) {
             System.out.println(INPUT_ERROR);
-            return sc.nextLine();
+            return getWord();
         } finally {
             sc.close();
         }

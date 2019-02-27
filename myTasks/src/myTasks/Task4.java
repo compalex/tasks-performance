@@ -5,30 +5,28 @@ import java.util.Scanner;
 
 /**
  * The program finds GCD and LCM of two numbers
+ * 
  * @version 1.0
  * @author compalex
  */
 public class Task4 {
-    private static int num1;
-    private static int num2;
     private static final String INPUT_PROMPT_1 = "Input the first number:";
     private static final String INPUT_PROMPT_2 = "Input the second number:";
     private static final String INPUT_ERROR = "Error! Wrong input!";
-    private static final String DISPLAY_GCD = "The greatest common divisor of ";
-    private static final String DISPLAY_LCM = "The greatest common divisor of ";
-    private static final String AND = " and ";
-    private static final String IS = " is: ";
-    
+    private static final String DISPLAY_GCD = "The greatest common divisor of %d and %d equals %d%n";
+    private static final String DISPLAY_LCM = "The least common multiple of %d and %d equals %d%n";
+    private static int num1;
+    private static int num2;
 
     public static void main(String[] args) {
         getNumbers();
-        System.out.println(DISPLAY_GCD + num1 + AND + num2 + IS + getGCD(num1, num2));
-        System.out.println(DISPLAY_LCM + num1 + AND + num2 + IS + getLCM(num1, num2));
+        System.out.printf(DISPLAY_GCD, num1, num2, getGCD(num1, num2));
+        System.out.printf(DISPLAY_LCM, num1, num2, getLCM(num1, num2));
     }
 
     private static void getNumbers() {
         Scanner sc = new Scanner(System.in);
-        
+
         try {
             System.out.println(INPUT_PROMPT_1);
             num1 = sc.nextInt();

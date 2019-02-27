@@ -31,9 +31,7 @@ public class Task2 {
     }
 
     private static void printFibo(int inputNumber) {
-        if(inputNumber < 0) {
-            return;
-        }
+        if(inputNumber < 0) return;        
         int numBefore = 0;
 
         for (int i = 1; numBefore <= inputNumber; i += numBefore) {
